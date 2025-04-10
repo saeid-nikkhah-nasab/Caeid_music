@@ -8,7 +8,9 @@
     <!-- External Fonts and Libraries -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" type="image/png" href="https://images.icon-icons.com/3630/PNG/512/artist_music_icon_227416.png"> <!-- Replace with your favicon -->
+    <link rel="icon" type="image/png"
+        href="https://images.icon-icons.com/3630/PNG/512/artist_music_icon_227416.png">
+    <!-- Replace with your favicon -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- Embedded CSS -->
@@ -134,22 +136,32 @@
 
         /* Releases Section */
         #releases {
-            overflow-x: auto;
-            white-space: nowrap;
-            padding-bottom: 20px; /* Add some padding for scrollbar */
+            /* overflow-x: auto; */
+            /* white-space: nowrap; */
+            padding-bottom: 20px;
+            /* Add some padding for scrollbar */
         }
 
         .music-grid {
-            display: inline-flex; /* Changed to inline-flex */
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* Changed to inline-flex */
             gap: 20px;
-            width: auto; /* Adjust width to content */
-            max-width: none; /* Remove max-width */
+            width: 100%;
+            /* Adjust width to content */
+            max-width: 90%;
+            /* Remove max-width */
         }
 
         .music-item {
             position: relative;
-            width: 300px; /* Set a fixed width for each item */
-            flex: 0 0 auto; /* Prevent items from shrinking or growing */
+            width: 300px;
+            /* Set a fixed width for each item */
+            flex: 0 0 auto;
+            /* Prevent items from shrinking or growing */
+            scroll-snap-align: start;
         }
 
         .music-item img {
@@ -181,22 +193,32 @@
 
         /* Videos Section */
         #videos {
-            overflow-x: auto;
-            white-space: nowrap;
-            padding-bottom: 20px; /* Add some padding for scrollbar */
+            /* overflow-x: auto; */
+            /* white-space: nowrap; */
+            padding-bottom: 20px;
+            /* Add some padding for scrollbar */
         }
 
         .video-grid {
-            display: inline-flex; /* Changed to inline-flex */
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* Changed to inline-flex */
             gap: 20px;
-            width: auto; /* Adjust width to content */
-            max-width: none; /* Remove max-width */
+            width: 100%;
+            /* Adjust width to content */
+            max-width: 90%;
+            /* Remove max-width */
         }
 
         .video-grid iframe {
-            width: 560px; /* Set a fixed width for each video */
+            width: 560px;
+            /* Set a fixed width for each video */
             height: 315px;
-            flex: 0 0 auto; /* Prevent items from shrinking or growing */
+            flex: 0 0 auto;
+            /* Prevent items from shrinking or growing */
+            scroll-snap-align: start;
         }
 
         /* Spotify Links Section */
@@ -324,19 +346,21 @@
 
             /* Responsive adjustments for horizontal scrolling */
             .music-grid {
-                display: inline-flex;
+                display: flex;
             }
 
             .music-item {
-                width: 200px; /* Smaller width for mobile */
+                width: 200px;
+                /* Smaller width for mobile */
             }
 
             .video-grid {
-                display: inline-flex;
+                display: flex;
             }
 
             .video-grid iframe {
-                width: 320px; /* Smaller width for mobile */
+                width: 320px;
+                /* Smaller width for mobile */
                 height: 180px;
             }
         }
@@ -381,7 +405,8 @@
             <h2>Releases</h2>
             <div class="music-grid">
                 <div class="music-item">
-                    <img src="https://cdn-images.dzcdn.net/images/cover/0e4acaef3f9b33e8cc4de62a25db0236/500x500-000000-80-0-0.jpg" alt="Descension">
+                    <img src="https://cdn-images.dzcdn.net/images/cover/0e4acaef3f9b33e8cc4de62a25db0236/500x500-000000-80-0-0.jpg"
+                        alt="Descension">
                     <div class="overlay">Caeid - Descension</div>
                 </div>
                 <div class="music-item">
@@ -389,18 +414,21 @@
                     <div class="overlay">Caeid - Enigmatic Float</div>
                 </div>
                 <div class="music-item">
-                    <img src="http://shiftaxisrecords.com/wp-content/uploads/2022/01/SAX512_300.jpg" alt="Fallen Star">
+                    <img src="http://shiftaxisrecords.com/wp-content/uploads/2022/01/SAX512_300.jpg"
+                        alt="Fallen Star">
                     <div class="overlay">Caeid - Fallen Star</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://pimg.awa.io/v2/jacket/f7ee233d78fdc527e057.w400.h400.v1741106653.webp" alt="Nirvana">
+                    <img src="https://pimg.awa.io/v2/jacket/f7ee233d78fdc527e057.w400.h400.v1741106653.webp"
+                        alt="Nirvana">
                     <div class="overlay">Caeid - Nirvana</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/ed/15/00ed151e-6bc2-b84f-0daf-a20f32c58486/cover.jpg/486x486bb.png" alt="Hymn">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/00/ed/15/00ed151e-6bc2-b84f-0daf-a20f32c58486/cover.jpg/486x486bb.png"
+                        alt="Hymn">
                     <div class="overlay">Caeid - Hymn</div>
                 </div>
-                              <div class="music-item">
+                <div class="music-item">
                     <img src="https://m.media-amazon.com/images/I/61AfCwW3lBS._UXNaN_FMjpg_QL85_.jpg" alt="Rapture">
                     <div class="overlay">Caeid - Rapture</div>
                 </div>
@@ -409,38 +437,45 @@
                     <div class="overlay">Caeid - Undine</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://static.wixstatic.com/media/970089_a12b08d05b6d41d2b0c86b961e15bcd5~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/bcc1e99e-b597-41ba-be74-7076ea8fbd72.jpg" alt="Mysterious Tunnel">
+                    <img src="https://static.wixstatic.com/media/970089_a12b08d05b6d41d2b0c86b961e15bcd5~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/bcc1e99e-b597-41ba-be74-7076ea8fbd72.jpg"
+                        alt="Mysterious Tunnel">
                     <div class="overlay">Caeid - Mysterious Tunnel</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://resources.tidal.com/images/53728bdd/3a9d/4e23/a785/78161f97387b/640x640.jpg" alt="Cotton Blouse">
+                    <img src="https://resources.tidal.com/images/53728bdd/3a9d/4e23/a785/78161f97387b/640x640.jpg"
+                        alt="Cotton Blouse">
                     <div class="overlay">Caeid - Cotton Blouse</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6b/f7/42/6bf74282-7858-07dc-3226-affadac3f492/191079421398_cover.jpg/208x208bb.webp" alt="Sky Dance">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6b/f7/42/6bf74282-7858-07dc-3226-affadac3f492/191079421398_cover.jpg/208x208bb.webp"
+                        alt="Sky Dance">
                     <div class="overlay">Caeid - Sky Dance</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://i.discogs.com/TsjObskQ01FsPecn0CYgfp6UJcFuUfxIIlfm5dOwYdI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NDY5/NDE0LTE2MTk0NDg1/MjAtNDMyMi5qcGVn.jpeg" alt="Revival">
+                    <img src="https://i.discogs.com/TsjObskQ01FsPecn0CYgfp6UJcFuUfxIIlfm5dOwYdI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NDY5/NDE0LTE2MTk0NDg1/MjAtNDMyMi5qcGVn.jpeg"
+                        alt="Revival">
                     <div class="overlay">Caeid - Revival</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://static.wixstatic.com/media/970089_1e0ae550a75f49fa8e00cc879c6411e8~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/maxresdefault_edited.jpg" alt="Dream">
+                    <img src="https://static.wixstatic.com/media/970089_1e0ae550a75f49fa8e00cc879c6411e8~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/maxresdefault_edited.jpg"
+                        alt="Dream">
                     <div class="overlay">Caeid - Dream</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://static.wixstatic.com/media/970089_83a4cdff6597489c854fc7b40cf5243c~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/89e8d3fe-a4ce-4fa9-bce0-482de20a25f1.jpg" alt="Leap">
+                    <img src="https://static.wixstatic.com/media/970089_83a4cdff6597489c854fc7b40cf5243c~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/89e8d3fe-a4ce-4fa9-bce0-482de20a25f1.jpg"
+                        alt="Leap">
                     <div class="overlay">Caeid - Leap</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://static.wixstatic.com/media/970089_4bacf2ce9bfa4d75b5081acbb79477bd~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/06718115-66b3-4175-8009-7a11080190d4.jpg" alt="Small House">
+                    <img src="https://static.wixstatic.com/media/970089_4bacf2ce9bfa4d75b5081acbb79477bd~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/06718115-66b3-4175-8009-7a11080190d4.jpg"
+                        alt="Small House">
                     <div class="overlay">Caeid - Small House</div>
                 </div>
                 <div class="music-item">
-                    <img src="https://static.wixstatic.com/media/970089_2a32d9977b934ce1a7bee4313839e872~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/cc0b5ed5-fc23-4c57-869f-abadf794a1e4.jpg" alt="Dark Light EP">
+                    <img src="https://static.wixstatic.com/media/970089_2a32d9977b934ce1a7bee4313839e872~mv2.jpg/v1/fill/w_301,h_240,al_c,lg_1,q_80,enc_avif,quality_auto/cc0b5ed5-fc23-4c57-869f-abadf794a1e4.jpg"
+                        alt="Dark Light EP">
                     <div class="overlay">Caeid - Dark Light EP</div>
                 </div>
-
             </div>
         </section>
         <section id="videos">
@@ -457,20 +492,20 @@
                     allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://youtu.be/fizWcNMRiTk" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>                
-               <iframe width="560" height="315" src="https://youtu.be/uk97aFdQFIQ" frameborder="0"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://youtu.be/uk97aFdQFIQ" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>             
-               <iframe width="560" height="315" src="https://youtu.be/R2ob2zNeTC4" frameborder="0"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://youtu.be/R2ob2zNeTC4" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>          
-               <iframe width="560" height="315" src="https://youtu.be/JH1tBigYVtM" frameborder="0"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://youtu.be/JH1tBigYVtM" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>        
-               <iframe width="560" height="315" src="https://youtu.be/eb0HfgksRFU" frameborder="0"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://youtu.be/eb0HfgksRFU" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>            
-               <iframe width="560" height="315" src="https://youtu.be/ans2Geh3Wsk" frameborder="0"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://youtu.be/ans2Geh3Wsk" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <iframe width="560" height="315" src="https://youtu.be/Bav4khZBaJ8" frameborder="0"
@@ -479,19 +514,19 @@
                 <iframe width="560" height="315" src="https://youtu.be/3zPzJjUxSXY" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                 <iframe width="560" height="315" src="https://youtu.be/hWT6vQiOTzg" frameborder="0"
+                <iframe width="560" height="315" src="https://youtu.be/hWT6vQiOTzg" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                 <iframe width="560" height="315" src="https://youtu.be/KRqjqZMf92w" frameborder="0"
+                <iframe width="560" height="315" src="https://youtu.be/KRqjqZMf92w" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                 <iframe width="560" height="315" src="https://youtu.be/-P5POraD7v4" frameborder="0"
+                <iframe width="560" height="315" src="https://youtu.be/-P5POraD7v4" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                 <iframe width="560" height="315" src="https://youtu.be/8FLIttE8IuM" frameborder="0"
+                <iframe width="560" height="315" src="https://youtu.be/8FLIttE8IuM" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe
-                  <iframe width="560" height="315" src="https://youtu.be/BCuizYWKPy0" frameborder="0"
+                    allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://youtu.be/BCuizYWKPy0" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
@@ -500,7 +535,9 @@
             <h2>Listen on Spotify</h2>
             <div class="music-links">
                 <a href="https://open.spotify.com/artist/1MtcuOsdUmn1Pkp1cAUpyu" class="spotify-btn">Artist Page</a>
-                <a href="https://open.spotify.com/playlist/37i9dQZF1E4xRDabBfw1K9?si=JJC-ch4dR6eI4mTKdn4_WQ" class="spotify-btn">Latest Album</a>
+                <a
+                    href="https://open.spotify.com/playlist/37i9dQZF1E4xRDabBfw1K9?si=JJC-ch4dR6eI4mTKdn4_WQ"
+                    class="spotify-btn">Latest Album</a>
             </div>
         </section>
         <section id="contact">
@@ -508,7 +545,8 @@
             <div class="contact-links">
                 <a href="https://instagram.com/c.a.e.i.d" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://soundcloud.com/caeid" target="_blank"><i class="fab fa-soundcloud"></i></a>
-                <a href="https://open.spotify.com/artist/1MtcuOsdUmn1Pkp1cAUpyu" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://open.spotify.com/artist/1MtcuOsdUmn1Pkp1cAUpyu" target="_blank"><i
+                        class="fab fa-spotify"></i></a>
                 <a href="mailto:sniks6334@email.com"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
@@ -519,7 +557,6 @@
     <script>
         // Register ScrollTrigger plugin
         gsap.registerPlugin(ScrollTrigger);
-
         // Hero Section Animations
         gsap.from(".hero h1", {
             opacity: 0,
@@ -539,7 +576,6 @@
             duration: 1,
             delay: 0.9
         });
-
         // Scroll Animations for Other Sections
         gsap.utils.toArray("section").forEach((section, i) => {
             if (i !== 0) { // Skip hero section
@@ -556,7 +592,6 @@
                 });
             }
         });
-
         // Navigation Active Class
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav a");
@@ -575,7 +610,6 @@
             threshold: 0.5
         });
         sections.forEach(section => observer.observe(section));
-
         // Tap Effects for Mobile
         const interactiveElements = document.querySelectorAll(".btn, .spotify-btn, .contact-links a");
         interactiveElements.forEach(el => {
@@ -588,14 +622,12 @@
                 }, 300);
             });
         });
-
         // Loading Screen
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 document.getElementById('loading').style.display = 'none';
             }, 2000); // 2 seconds
         });
-
         // Go to Top Button
         window.addEventListener('scroll', () => {
             const button = document.getElementById('go-to-top');
@@ -605,7 +637,6 @@
                 button.classList.remove('show');
             }
         });
-
         document.getElementById('go-to-top').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
